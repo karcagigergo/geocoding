@@ -4,7 +4,18 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 const fitMapToMarkers = (map, markers) => {
   const bounds = new mapboxgl.LngLatBounds();
   markers.forEach(marker => bounds.extend([marker.lng, marker.lat]));
-  map.fitBounds(bounds, { padding: 100, maxZoom: 20, duration: 2000 });
+  map.fitBounds(bounds, { padding: 200, maxZoom: 20, duration: 2000 });
+};
+
+const addMarkersToMap = (map, markers) => {
+  markers.forEach((marker) => {
+    const popup = new mapboxgl.Popup().setHTML(marker.info_window); // add this
+
+    new mapboxgl.Marker()
+      .setLngLat([marker.lng, marker.lat])
+      .setPopup(popup) // add this
+      .addTo(map);
+  });
 };
 
 const initMapbox = () => {
@@ -23,6 +34,7 @@ const initMapbox = () => {
         .addTo(map);
     });
     fitMapToMarkers(map, markers);
+    addMarkersToMap(map, markers);
   }
 };
 

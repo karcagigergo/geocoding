@@ -3,13 +3,14 @@ class FlatsController < ApplicationController
 
   # GET /flats or /flats.json
   def index
-    @flats = Flat.all
+    @flats = Flat.geocoded
 
-    # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
-    @markers = @flats.geocoded.map do |flat|
+    @markers = @flats.map do |flat|
       {
         lat: flat.latitude,
-        lng: flat.longitude
+        lng: flat.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { flat: flat }),
+      #  image_url: helpers.asset_url('prof.jpg')
       }
     end
   end
