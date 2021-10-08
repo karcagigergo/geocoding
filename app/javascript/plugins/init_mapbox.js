@@ -26,7 +26,7 @@ const initMapbox = () => {
     mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
     const map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v10'
+      style: 'mapbox://styles/karcagigergo/ckuho913r1r9217rwoeviln7a'
     });
     map.addControl(new MapboxGeocoder({
       accessToken: mapboxgl.accessToken,
