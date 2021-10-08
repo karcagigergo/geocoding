@@ -1,2 +1,6 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner-home d-flex align-items-center">
+  <div class="container d-flex flex-column align-items-center">
+    <h1 class="pb-5">SAVE PLACES AND CHECK THEM OUT ON THE MAP!</h1>
+    <%= link_to 'See all flats', flats_path(@flat), class: "btn btn-outline-primary rounded-pill" %>
+  </div>
+</div>
