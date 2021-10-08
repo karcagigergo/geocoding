@@ -1,0 +1,7 @@
+# config/meta.yml
+
+meta_product_name: "🌎 Gergő's Geocoding App!"
+meta_title: "🌎 Gergő's Geocoding App! | Make flats, store and check them on the map!"
+meta_description: "It is very easy to do, click on 'Create a flat', type in the name and start searching for places around the world!
+Algolia Places will help you with its autocomplete function!"
+twitter_account: "@product_twitter_account" # required for Twitter Cards
