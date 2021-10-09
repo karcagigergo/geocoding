@@ -1,11 +1,12 @@
 // Specific CSS for your home-page
 body, html {
   height: 100%;
+  color: black;
 }
 
 .banner-home {
   /* The image used */
-  background-image: url("https://source.unsplash.com/Q1p7bh3SHj8/1600x900).jpg");
+  background-image: image-url('nasa.jpg');
 
   /* Full height */
   height: 100%;
@@ -17,12 +18,21 @@ body, html {
 }
 .banner-home h1 {
   margin: 0;
-  color: white;
-  font-size: 62px;
-  font-weight: 700;
+  color: #eeeeee;
+  font-size: 56px;
+  font-weight: 200;
   letter-spacing: 4px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
-  font-family: 'Poiret One', cursive;
+  text-shadow: 5px 5px 3px rgba(0, 0, 0, 1);
+  font-family: 'Josefin Slab', serif;
+}
+
+.banner-home p {
+  color: #eeeeee;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-shadow: 5px 5px 3px black;
+  font-family: 'Josefin Slab', serif;
 }
 
 #home-logo {
